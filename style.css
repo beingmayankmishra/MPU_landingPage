@@ -20,7 +20,7 @@
             color: var(--dark-gray);
         }
 
-       /* Base Styles (Mobile First) */
+     
 header {
     display: flex;
     justify-content: space-between;
@@ -40,6 +40,21 @@ header {
     flex-direction: column;
     align-items: flex-end;
     gap: 8px;
+}
+
+.contact-items {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #000;
+    text-decoration: none;
+    font-size: 14px;
 }
 
 .contact-group {
@@ -85,6 +100,27 @@ header {
     white-space: nowrap;
 }
 
+/* Responsive for larger screens */
+@media (min-width: 768px) {
+    .header-contact {
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .contact-items {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+/* Optional for ultra-large screens */
+@media (min-width: 1200px) {
+    .header-contact {
+        gap: 30px;
+    }
+}
+
 /* Animations */
 @keyframes gradient {
     0% { background-position: 0% 50%; }
@@ -103,11 +139,7 @@ header {
         padding: 10px 45px;
     }
     
-    .header-contact {
-        flex-direction: row;
-        align-items: center;
-        gap: 20px;
-    }
+   
     
     .contact-items {
         flex-direction: row;
@@ -132,9 +164,7 @@ header {
         max-height: 60px;
     }
     
-    .header-contact {
-        gap: 30px;
-    }
+    
 }
 
         /* Banner Section */
@@ -533,18 +563,6 @@ header {
 
 
 
-        /* program section end here  */
-
-
-
-        /* Programs Section */
-        .programs {
-            padding: 80px 5%;
-            background: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80') no-repeat center center/cover;
-            position: relative;
-            color: var(--white);
-        }
-
         .programs::before {
             content: '';
             position: absolute;
@@ -634,9 +652,9 @@ header {
   transform: scale(1.02);
 }
 
-/* Optional: Increase height using container or min-height */
+
 .collab-full-wrapper {
-  max-height: 600px; /* adjust as per your image aspect ratio */
+  max-height: 600px; 
 }
 
 @media (max-width: 768px) {
@@ -664,7 +682,7 @@ header {
             grid-template-columns: repeat(5, 1fr);
             gap: 15px;
             margin-top: 30px;
-            background-color: #f0eded; /* Off-white box feel */
+            background-color: #f0eded; 
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
@@ -716,6 +734,35 @@ header {
             background-color: var(--royal-blue);
             transform: translateY(-50%) scale(1.05);
         }
+
+
+        /* Floating WhatsApp Icon */
+.floating-whatsapp {
+    position: fixed;
+    right: 30px;
+    top: 60%;
+    background-color: #25D366; 
+    color: white;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    font-size: 24px;
+    text-align: center;
+    transition: transform 0.3s;
+    text-decoration: none;
+}
+
+.floating-whatsapp:hover {
+    transform: scale(1.1);
+}
+
+
+
 
         /* Footer */
         footer {
@@ -843,6 +890,15 @@ header {
                 padding: 12px 8px;
                 font-size: 0.9rem;
             }
+
+             .floating-whatsapp {
+        right: 15px;
+        padding: 10px;
+        font-size: 18px;
+        width: 36px;
+        height: 36px;
+        top: 58%;
+    }
 
             .gallery-container {
                 grid-template-columns: repeat(2, 1fr);
